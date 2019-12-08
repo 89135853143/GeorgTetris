@@ -34,11 +34,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.Fam = new System.Windows.Forms.TextBox();
+            this.Names = new System.Windows.Forms.TextBox();
+            this.Patron = new System.Windows.Forms.TextBox();
+            this.School = new System.Windows.Forms.TextBox();
+            this.Pass = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -101,56 +102,69 @@
             this.label5.TabIndex = 5;
             this.label5.Text = "Придумайте пароль";
             // 
-            // textBox1
+            // Fam
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(395, 76);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(177, 29);
-            this.textBox1.TabIndex = 6;
+            this.Fam.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Fam.Location = new System.Drawing.Point(395, 76);
+            this.Fam.Name = "Fam";
+            this.Fam.Size = new System.Drawing.Size(177, 29);
+            this.Fam.TabIndex = 6;
+            this.Fam.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // textBox2
+            // Names
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox2.Location = new System.Drawing.Point(395, 128);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(177, 29);
-            this.textBox2.TabIndex = 7;
+            this.Names.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Names.Location = new System.Drawing.Point(395, 128);
+            this.Names.Name = "Names";
+            this.Names.Size = new System.Drawing.Size(177, 29);
+            this.Names.TabIndex = 7;
+            this.Names.TextChanged += new System.EventHandler(this.Names_TextChanged);
             // 
-            // textBox3
+            // Patron
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox3.Location = new System.Drawing.Point(395, 178);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(177, 29);
-            this.textBox3.TabIndex = 8;
+            this.Patron.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Patron.Location = new System.Drawing.Point(395, 178);
+            this.Patron.Name = "Patron";
+            this.Patron.Size = new System.Drawing.Size(177, 29);
+            this.Patron.TabIndex = 8;
+            this.Patron.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
-            // textBox4
+            // School
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox4.Location = new System.Drawing.Point(395, 236);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(177, 29);
-            this.textBox4.TabIndex = 9;
+            this.School.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.School.Location = new System.Drawing.Point(395, 236);
+            this.School.Name = "School";
+            this.School.Size = new System.Drawing.Size(177, 29);
+            this.School.TabIndex = 9;
+            this.School.TextChanged += new System.EventHandler(this.School_TextChanged);
             // 
-            // textBox5
+            // Pass
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox5.Location = new System.Drawing.Point(395, 299);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(177, 29);
-            this.textBox5.TabIndex = 10;
+            this.Pass.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Pass.Location = new System.Drawing.Point(395, 299);
+            this.Pass.Name = "Pass";
+            this.Pass.Size = new System.Drawing.Size(177, 29);
+            this.Pass.TabIndex = 10;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(441, 369);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(0, 13);
+            this.label6.TabIndex = 11;
             // 
             // registracia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1011, 592);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.Pass);
+            this.Controls.Add(this.School);
+            this.Controls.Add(this.Patron);
+            this.Controls.Add(this.Names);
+            this.Controls.Add(this.Fam);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -159,6 +173,7 @@
             this.Controls.Add(this.button1);
             this.Name = "registracia";
             this.Text = "registracia";
+            this.Load += new System.EventHandler(this.registracia_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -172,10 +187,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox Fam;
+        private System.Windows.Forms.TextBox Names;
+        private System.Windows.Forms.TextBox Patron;
+        private System.Windows.Forms.TextBox School;
+        private System.Windows.Forms.TextBox Pass;
+        private System.Windows.Forms.Label label6;
     }
 }

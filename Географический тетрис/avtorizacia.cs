@@ -24,14 +24,43 @@ namespace Географический_тетрис
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form s = new игра();//создание экземпляра формы настройки
-            Hide();//скрыть форму которая есть
-            s.ShowDialog();//чтобы отобразить следующую форму
-            Show();//для отображения формы
+            if (radioButton2.Checked == true)
+            {
+                string[] LogPas = System.IO.File.ReadAllLines("bazaycheniki.txt");//массив по строчкам в базе
+                for(int i=0; i< LogPas.Length;i++)
+                {
+                    string[] split = LogPas[i].Split(' ');//массив по словам
+                    if (textBox2.Text==split[0] + " " + split[1] + " " + split[2])
+                    {
+                        Form s = new игра();//создание экземпляра формы настройки
+                        Hide();//скрыть форму которая есть
+                        s.ShowDialog();//чтобы отобразить следующую форму
+                        Close();//для отображения формы
+                        break;
+                    }
+                }
+                
+            }
+            else
+            {
+                string[] LogPas = System.IO.File.ReadAllLines("baza.txt");//массив по строчкам в базе
+                for (int i = 0; i < LogPas.Length; i++)
+                {
+                    string[] split = LogPas[i].Split(' ');//массив по словам
+                    if (textBox2.Text == split[4])
+                    {
+                        Form p = new Start_dlia_ychitelia();
+                        Hide();
+                        p.ShowDialog();
+                        Show();
+                    }
+                }
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+
             Form l = new registracia();
             Hide();
             l.ShowDialog();

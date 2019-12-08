@@ -16,7 +16,7 @@ namespace Географический_тетрис
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new yr1());
+            Application.Run(new avtorizacia());
         }
     }
 }

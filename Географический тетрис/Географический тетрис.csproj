@@ -72,6 +72,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registraciaychenikov.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registraciaychenikov.Designer.cs">
+      <DependentUpon>Registraciaychenikov.cs</DependentUpon>
+    </Compile>
     <Compile Include="registracia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,12 @@
     </Compile>
     <Compile Include="rekord.Designer.cs">
       <DependentUpon>rekord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Startdliaychitelia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Startdliaychitelia.Designer.cs">
+      <DependentUpon>Startdliaychitelia.cs</DependentUpon>
     </Compile>
     <Compile Include="start.cs">
       <SubType>Form</SubType>
@@ -136,11 +148,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Registraciaychenikov.resx">
+      <DependentUpon>Registraciaychenikov.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="registracia.resx">
       <DependentUpon>registracia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="rekord.resx">
       <DependentUpon>rekord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Startdliaychitelia.resx">
+      <DependentUpon>Startdliaychitelia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="start.resx">
       <DependentUpon>start.cs</DependentUpon>
