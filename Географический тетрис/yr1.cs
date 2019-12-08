@@ -22,6 +22,7 @@ namespace Географический_тетрис
         Random random = new Random();//создала переменную для генерации случайных чисел
         int countP;//переменная для количества объектов, которые будут падать
         int gr;
+        int sdvig = 0;
         public yr1()
         {
             InitializeComponent();
@@ -53,8 +54,9 @@ namespace Географический_тетрис
             Refresh();//Таймер для обновления
             if (shirina > 50 && vusota > 50)
             {
-                vusota = vusota - 5;//изменение размера картинок по высоте
-                shirina = shirina - 5;//изменение размера картинок по ширине
+                vusota = vusota - 4;//изменение размера картинок по высоте
+                shirina = shirina - 4;//изменение размера картинок по ширине
+                sdvig += 2;
             }
             else
             {
@@ -90,11 +92,11 @@ namespace Географический_тетрис
             {
                 y = y + 10;
             }
-            if (e.KeyCode == Keys.Q)//при нажатие на кнопку Q крутится 
+            if (e.KeyCode == Keys.Q)//при нажатие на кнопку Q крутится против часовой
             {
                 gr = gr + 45;
             }
-            if (e.KeyCode == Keys.E)//при нажатие на кнопку E крутится 
+            if (e.KeyCode == Keys.E)//при нажатие на кнопку E крутится по часовой
             {
                 gr = gr - 45;
             }
@@ -105,16 +107,20 @@ namespace Географический_тетрис
             Graphics g = e.Graphics;
             g.DrawImage(play1, new Rectangle(0, 0, 700, 450));//загружаем фон
             Bitmap play2 = new Bitmap(Image.FromFile(puthUr+"\\"+l1[gen]), shirina, vusota);//добавила первый объект
+            Bitmap p3 = new Bitmap(shirina, vusota);
+
             TextureBrush tb = new TextureBrush(play2, System.Drawing.Drawing2D.WrapMode.Clamp);//создаем текстурную кисть
             tb.TranslateTransform(vusota / 2, shirina / 2);//сдвиг объектов
             tb.RotateTransform(gr, System.Drawing.Drawing2D.MatrixOrder.Prepend);//поворот
             tb.TranslateTransform(-vusota / 2, -shirina / 2);//сдвиг объектов
-            tb.TranslateTransform(x, y);//сдвиг объектов
-            //g.FillRectangle(tb, 0, 0, pictureBox1.Width, pictureBox1.Height);
-            Graphics g2 = Graphics.FromImage(play2);
+          //  tb.TranslateTransform(x, y);//сдвиг объектов
+           // g.FillRectangle(tb, 0, 0, pictureBox1.Width, pictureBox1.Height);
+            Graphics g2 = Graphics.FromImage(p3);
+            pictureBox3.Image = p3;
+
             g2.FillRectangle(tb, 0, 0, vusota, shirina);
-            Bitmap p1 = new Bitmap(shirina, vusota, g2);
-            g.DrawImage(play2, new PointF(x, y));//загружаем объект который падает
+            Bitmap p1 = new Bitmap(pictureBox3.Image);
+            g.DrawImage(p1, new PointF(x+sdvig, y+sdvig));//загружаем объект который падает
         }
     }
 }
