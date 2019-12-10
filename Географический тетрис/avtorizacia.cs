@@ -32,6 +32,8 @@ namespace Географический_тетрис
                     string[] split = LogPas[i].Split(' ');//массив по словам
                     if (textBox2.Text==split[0] + " " + split[1] + " " + split[2])
                     {
+                        Dannue.dan = textBox2.Text;
+
                         Form s = new игра();//создание экземпляра формы настройки
                         Hide();//скрыть форму которая есть
                         s.ShowDialog();//чтобы отобразить следующую форму
@@ -80,6 +82,11 @@ namespace Географический_тетрис
                 label2.Text = "ФИО";
                 button2.Visible = false;
             }
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

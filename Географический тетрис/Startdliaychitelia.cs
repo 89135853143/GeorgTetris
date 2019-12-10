@@ -29,5 +29,18 @@ namespace Географический_тетрис
             z.ShowDialog();
             Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form y = new rekord();
+            Hide();
+            y.ShowDialog();
+            Show();
+        }
     }
 }
